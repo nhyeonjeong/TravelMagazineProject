@@ -21,6 +21,7 @@
 		8BAF0BDF2B4DB4DE00FA3EF0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAF0BDE2B4DB4DE00FA3EF0 /* Kingfisher */; };
 		8BAF0BE22B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BE02B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift */; };
 		8BAF0BE32B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAF0BE12B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib */; };
+		8BAF0BE62B4DBAFC00FA3EF0 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BE52B4DBAFC00FA3EF0 /* CityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8BAF0BDC2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BAF0BE02B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityReuseCollectionViewCell.swift; sourceTree = "<group>"; };
 		8BAF0BE12B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityReuseCollectionViewCell.xib; sourceTree = "<group>"; };
+		8BAF0BE52B4DBAFC00FA3EF0 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		8B9267E32B4C0D3900F5CFF6 /* TravelMagazineProject */ = {
 			isa = PBXGroup;
 			children = (
+				8BAF0BE42B4DBAB600FA3EF0 /* RootIsViewController */,
 				8BAF0BD92B4DAD9800FA3EF0 /*  RootIsCollectionViewController */,
 				8B9267E42B4C0D3900F5CFF6 /* AppDelegate.swift */,
 				8B9267E62B4C0D3900F5CFF6 /* SceneDelegate.swift */,
@@ -95,6 +98,14 @@
 				8BAF0BE12B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib */,
 			);
 			path = " RootIsCollectionViewController";
+			sourceTree = "<group>";
+		};
+		8BAF0BE42B4DBAB600FA3EF0 /* RootIsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8BAF0BE52B4DBAFC00FA3EF0 /* CityViewController.swift */,
+			);
+			path = RootIsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				8BAF0BDB2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift in Sources */,
 				8B9267E92B4C0D3900F5CFF6 /* ViewController.swift in Sources */,
 				8B9267F92B4C0F3F00F5CFF6 /* TravelTableViewCell.swift in Sources */,
+				8BAF0BE62B4DBAFC00FA3EF0 /* CityViewController.swift in Sources */,
 				8B9267E52B4C0D3900F5CFF6 /* AppDelegate.swift in Sources */,
 				8B9267E72B4C0D3900F5CFF6 /* SceneDelegate.swift in Sources */,
 				8B9267FB2B4C0F5000F5CFF6 /* TravelTableViewController.swift in Sources */,
