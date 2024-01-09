@@ -16,6 +16,9 @@
 		8B9267F92B4C0F3F00F5CFF6 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267F82B4C0F3F00F5CFF6 /* TravelTableViewCell.swift */; };
 		8B9267FB2B4C0F5000F5CFF6 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267FA2B4C0F5000F5CFF6 /* TravelTableViewController.swift */; };
 		8B9267FE2B4C156F00F5CFF6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B9267FD2B4C156F00F5CFF6 /* Kingfisher */; };
+		8BAF0BDB2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BDA2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift */; };
+		8BAF0BDD2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BDC2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift */; };
+		8BAF0BDF2B4DB4DE00FA3EF0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAF0BDE2B4DB4DE00FA3EF0 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,8 @@
 		8B9267F22B4C0D3A00F5CFF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B9267F82B4C0F3F00F5CFF6 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		8B9267FA2B4C0F5000F5CFF6 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
+		8BAF0BDA2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityFirstCollectionViewController.swift; sourceTree = "<group>"; };
+		8BAF0BDC2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAF0BDF2B4DB4DE00FA3EF0 /* Kingfisher in Frameworks */,
 				8B9267FE2B4C156F00F5CFF6 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +68,7 @@
 		8B9267E32B4C0D3900F5CFF6 /* TravelMagazineProject */ = {
 			isa = PBXGroup;
 			children = (
+				8BAF0BD92B4DAD9800FA3EF0 /*  RootIsCollectionViewController */,
 				8B9267E42B4C0D3900F5CFF6 /* AppDelegate.swift */,
 				8B9267E62B4C0D3900F5CFF6 /* SceneDelegate.swift */,
 				8B9267E82B4C0D3900F5CFF6 /* ViewController.swift */,
@@ -73,6 +80,15 @@
 				8B9267FA2B4C0F5000F5CFF6 /* TravelTableViewController.swift */,
 			);
 			path = TravelMagazineProject;
+			sourceTree = "<group>";
+		};
+		8BAF0BD92B4DAD9800FA3EF0 /*  RootIsCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8BAF0BDA2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift */,
+				8BAF0BDC2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift */,
+			);
+			path = " RootIsCollectionViewController";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +109,7 @@
 			name = TravelMagazineProject;
 			packageProductDependencies = (
 				8B9267FD2B4C156F00F5CFF6 /* Kingfisher */,
+				8BAF0BDE2B4DB4DE00FA3EF0 /* Kingfisher */,
 			);
 			productName = TravelMagazineProject;
 			productReference = 8B9267E12B4C0D3900F5CFF6 /* TravelMagazineProject.app */;
@@ -152,6 +169,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAF0BDD2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift in Sources */,
+				8BAF0BDB2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift in Sources */,
 				8B9267E92B4C0D3900F5CFF6 /* ViewController.swift in Sources */,
 				8B9267F92B4C0F3F00F5CFF6 /* TravelTableViewCell.swift in Sources */,
 				8B9267E52B4C0D3900F5CFF6 /* AppDelegate.swift in Sources */,
@@ -397,6 +416,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		8B9267FD2B4C156F00F5CFF6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B9267FC2B4C156F00F5CFF6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		8BAF0BDE2B4DB4DE00FA3EF0 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8B9267FC2B4C156F00F5CFF6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
