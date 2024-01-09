@@ -19,6 +19,8 @@
 		8BAF0BDB2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BDA2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift */; };
 		8BAF0BDD2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BDC2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift */; };
 		8BAF0BDF2B4DB4DE00FA3EF0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAF0BDE2B4DB4DE00FA3EF0 /* Kingfisher */; };
+		8BAF0BE22B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BE02B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift */; };
+		8BAF0BE32B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BAF0BE12B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8B9267FA2B4C0F5000F5CFF6 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		8BAF0BDA2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityFirstCollectionViewController.swift; sourceTree = "<group>"; };
 		8BAF0BDC2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BAF0BE02B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityReuseCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BAF0BE12B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityReuseCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 			children = (
 				8BAF0BDA2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift */,
 				8BAF0BDC2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift */,
+				8BAF0BE02B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift */,
+				8BAF0BE12B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib */,
 			);
 			path = " RootIsCollectionViewController";
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAF0BE32B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.xib in Resources */,
 				8B9267F12B4C0D3A00F5CFF6 /* LaunchScreen.storyboard in Resources */,
 				8B9267EE2B4C0D3A00F5CFF6 /* Assets.xcassets in Resources */,
 				8B9267EC2B4C0D3900F5CFF6 /* Main.storyboard in Resources */,
@@ -169,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAF0BE22B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift in Sources */,
 				8BAF0BDD2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift in Sources */,
 				8BAF0BDB2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift in Sources */,
 				8B9267E92B4C0D3900F5CFF6 /* ViewController.swift in Sources */,

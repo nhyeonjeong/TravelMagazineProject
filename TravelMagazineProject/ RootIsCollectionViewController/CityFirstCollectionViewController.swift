@@ -43,6 +43,11 @@ class CityFirstCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 재사용위해 따로 만든 cell을 사용하기 위해
+        // 2번숙제 : xib코드 추가
+        let xib = UINib(nibName: "CityReuseCollectionViewCell", bundle: nil)
+        collectionView.register(xib, forCellWithReuseIdentifier: "CityReuseCollectionViewCell")
 
         navigationItem.title = "인기 도시"
         
@@ -54,6 +59,9 @@ class CityFirstCollectionViewController: UICollectionViewController {
     
         // 레이아웃 잡기
         let layout = UICollectionViewFlowLayout()
+        
+        // 높이 계산함...(이게 맞나^^) width + 줬던 패딩 + label높이 대충 계산..
+        // label 두개를 stackview로 묶어줬는데 아래 label은 높이를 따로 부여하지 않아서 정확한 cell의 높이를 못 구하겠음.
         layout.itemSize = CGSize(width: width, height: width + 74)
         layout.minimumLineSpacing = verticalSpacing
         layout.minimumInteritemSpacing = horizontalSpacing
@@ -68,8 +76,9 @@ class CityFirstCollectionViewController: UICollectionViewController {
     }
     
     // cellForItemAt 에 많은 코드 부담않기 위해 UICollectionViewCell쪽에 전가
+    // 2번숙제 : withReuseIdentifier 바꿔주기
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityCollectionViewCell", for: indexPath) as! CityCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityReuseCollectionViewCell", for: indexPath) as! CityReuseCollectionViewCell
         
         cell.configureCell(data: city[indexPath.item], cellWidth: width)
         
