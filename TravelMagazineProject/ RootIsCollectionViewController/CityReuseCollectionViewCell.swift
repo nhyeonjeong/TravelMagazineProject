@@ -15,9 +15,12 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var citiesLabel: UILabel!
     
+    static var identifier = "CityCollectionViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        // 공통되는 부분 여기에
         cityImageView.contentMode = .scaleAspectFill
         
         cityNameLabel.font = .boldSystemFont(ofSize: 13)

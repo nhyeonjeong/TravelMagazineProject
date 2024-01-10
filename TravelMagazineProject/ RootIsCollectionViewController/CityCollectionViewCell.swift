@@ -14,6 +14,9 @@ class CityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var citiesLabel: UILabel!
     
+    // identifier을 다른 곳에서 사용할 수 있음
+    static var identifier = "CityCollectionViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
             

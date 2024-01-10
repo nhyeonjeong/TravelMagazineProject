@@ -18,7 +18,6 @@ enum TravelLocation: String, CaseIterable {
 class CityViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var domesticSegment: UISegmentedControl!
-    
     @IBOutlet weak var cityCollectionView: UICollectionView!
     
     let domestic = TravelLocation.allCases
@@ -52,7 +51,7 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         // cityCollectionView가 아닌  collectionView해도 오류 안나는 이유?
         // collectionView는 지정된게 아니라서 안되지 않나..???
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CityReuseCollectionViewCell", for: indexPath) as! CityReuseCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CityReuseCollectionViewCell.identifier, for: indexPath) as! CityReuseCollectionViewCell
         
         cell.configureCell(data: filterdCity[indexPath.item], cellWidth: width)
         return cell
@@ -65,13 +64,13 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         navigationItem.title = "인기 도시"
         filterdCity = city
         
-        let xib = UINib(nibName: "CityReuseCollectionViewCell", bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier: "CityReuseCollectionViewCell")
+        // 어차피 폴더명이랑 identifier랑 같으니까 static 변수로 같이 쓰기
+        let xib = UINib(nibName: CityReuseCollectionViewCell.identifier, bundle: nil)
+        cityCollectionView.register(xib, forCellWithReuseIdentifier: CityReuseCollectionViewCell.identifier)
         
         cityCollectionView.dataSource = self
         cityCollectionView.delegate = self
         
-        // 여기서는 복붙
         let verticalSpacing: CGFloat = 10
         let horizontalSpacing: CGFloat = 20
         let inset: CGFloat = 20
