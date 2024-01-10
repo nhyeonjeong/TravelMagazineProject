@@ -25,6 +25,7 @@
 		8BAF0BFC2B4EEFD700FA3EF0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BFB2B4EEFD600FA3EF0 /* City.swift */; };
 		8BAF0BFF2B4F0CCF00FA3EF0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0BFE2B4F0CCF00FA3EF0 /* UIViewController+Extension.swift */; };
 		8BAF0C012B4F109E00FA3EF0 /* UILable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0C002B4F109E00FA3EF0 /* UILable+Extension.swift */; };
+		8BAF0C032B4F293900FA3EF0 /* Magazine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAF0C022B4F293900FA3EF0 /* Magazine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		8BAF0BFB2B4EEFD600FA3EF0 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		8BAF0BFE2B4F0CCF00FA3EF0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8BAF0C002B4F109E00FA3EF0 /* UILable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILable+Extension.swift"; sourceTree = "<group>"; };
+		8BAF0C022B4F293900FA3EF0 /* Magazine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Magazine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				8B9267ED2B4C0D3A00F5CFF6 /* Assets.xcassets */,
 				8B9267EF2B4C0D3A00F5CFF6 /* LaunchScreen.storyboard */,
 				8B9267F22B4C0D3A00F5CFF6 /* Info.plist */,
+				8BAF0C022B4F293900FA3EF0 /* Magazine.swift */,
 				8B9267F82B4C0F3F00F5CFF6 /* TravelTableViewCell.swift */,
 				8B9267FA2B4C0F5000F5CFF6 /* TravelTableViewController.swift */,
 			);
@@ -210,6 +213,7 @@
 				8BAF0BFC2B4EEFD700FA3EF0 /* City.swift in Sources */,
 				8BAF0C012B4F109E00FA3EF0 /* UILable+Extension.swift in Sources */,
 				8BAF0BDB2B4DAE1900FA3EF0 /* CityFirstCollectionViewController.swift in Sources */,
+				8BAF0C032B4F293900FA3EF0 /* Magazine.swift in Sources */,
 				8B9267E92B4C0D3900F5CFF6 /* ViewController.swift in Sources */,
 				8B9267F92B4C0F3F00F5CFF6 /* TravelTableViewCell.swift in Sources */,
 				8BAF0BE62B4DBAFC00FA3EF0 /* CityViewController.swift in Sources */,
