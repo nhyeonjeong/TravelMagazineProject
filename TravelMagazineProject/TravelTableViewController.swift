@@ -22,28 +22,9 @@ class TravelTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as! TravelTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TravelTableViewCell.identifier, for: indexPath) as! TravelTableViewCell
         
-        let url = URL(string: magazine[indexPath.row].photo_image)
-        cell.magazineImageView.kf.setImage(with: url)
-        cell.magazineImageView.layer.cornerRadius = 10
-        
-        cell.magazineTitle.text = magazine[indexPath.row].title
-        
-        cell.magazineSubTitle.text = magazine[indexPath.row].subtitle
-        
-        // DateFormatter가 class여서 let으로 선언해줘도 밑에서 format을 변경가능
-        let format = DateFormatter()
-        format.dateFormat = "yyMMdd"
-        
-        // yyMMdd형식의 문자열을 Date타입으로 , 옵셔널 반환이니까 nil 병합 연산자 사용
-        let backToDate: Date = format.date(from: magazine[indexPath.row].date) ?? Date()
-        
-        // dateFormat 출력해줘야하는대로 다시 지정
-        format.dateFormat = "yy년 MM월 dd일"
-        
-        let result = format.string(from: backToDate)
-        cell.magazineDate.text = result
+        cell.configureCell(magazine: magazine[indexPath.row])
         
         return cell
     }
@@ -52,6 +33,5 @@ class TravelTableViewController: UITableViewController {
 //    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        return 200
 //    }
-    
 
 }
