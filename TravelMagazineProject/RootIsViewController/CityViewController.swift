@@ -65,6 +65,24 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cityCollectionView.collectionViewLayout = settingCollectionViewLayout(cellWidth: width)
     }
     
+    @IBAction func segmentClicked(_ sender: UISegmentedControl) {
+        // 눌린 세그먼트의 TravelLocation타입
+        let domesticTravel = domestic[sender.selectedSegmentIndex]
+        
+        if domesticTravel == .local {
+            filterdCity = city.filter({$0.domestic_travel})
+        } else if domesticTravel == .abroad {
+            filterdCity = city.filter({!$0.domestic_travel})
+        } else {
+            filterdCity = city
+        }
+        
+        cityCollectionView.reloadData() // 데이터 변경했으니 다시 로딩
+    }
+    
+}
+
+extension CityViewController: ViewControllerSetting {
     /// xib, register
     func collectionViewRegister() {
         // 어차피 폴더명이랑 identifier랑 같으니까 static 변수로 같이 쓰기
@@ -82,19 +100,4 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         return layout
     }
-    
-    @IBAction func segmentClicked(_ sender: UISegmentedControl) {
-        let domesticTravel = domestic[sender.selectedSegmentIndex]
-        
-        if domesticTravel == .local {
-            filterdCity = city.filter({$0.domestic_travel})
-        } else if domesticTravel == .abroad {
-            filterdCity = city.filter({$0.domestic_travel == false})
-        } else {
-            filterdCity = city
-        }
-        
-        cityCollectionView.reloadData() // 데이터 변경했으니 다시 로딩
-    }
-    
 }
