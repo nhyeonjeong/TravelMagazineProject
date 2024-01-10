@@ -49,8 +49,6 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        // cityCollectionView가 아닌  collectionView해도 오류 안나는 이유?
-        // collectionView는 지정된게 아니라서 안되지 않나..???
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CityReuseCollectionViewCell.identifier, for: indexPath) as! CityReuseCollectionViewCell
         
         cell.configureCell(data: filterdCity[indexPath.item], cellWidth: width)

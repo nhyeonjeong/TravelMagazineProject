@@ -7,7 +7,6 @@
 
 import UIKit
 
-// 라벨의 높이를 유동적으로 하고 싶다!.. -> stackview쓰니까 해결!
 private let reuseIdentifier = "Cell"
 struct City {
     var city_name: String

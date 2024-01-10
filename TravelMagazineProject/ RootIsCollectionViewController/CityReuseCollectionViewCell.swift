@@ -8,6 +8,9 @@
 import UIKit
 import Kingfisher
 
+// 라벨의 높이를 유동적으로 하고 싶다!..
+// -> stackview쓰니까 해결!(또는 label의 높이를 지정해주지 않으면 됨)
+
 // CityCollectionViewCell 내용과 동일
 class CityReuseCollectionViewCell: UICollectionViewCell {
 
@@ -20,7 +23,7 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        // 공통되는 부분 여기에
+        // 셀마다 공통으로 지정되는 부분
         cityImageView.contentMode = .scaleAspectFill
         
         cityNameLabel.font = .boldSystemFont(ofSize: 13)
@@ -35,6 +38,7 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
         
     }
     
+    // 셀마다 다르게 적용되는 디자인 함수로 배주기
     func configureCell(data: City, cellWidth: CGFloat) {
         
         cityImageView.layer.cornerRadius = cellWidth / 2

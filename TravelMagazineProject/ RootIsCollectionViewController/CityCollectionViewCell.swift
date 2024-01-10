@@ -20,6 +20,7 @@ class CityCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
             
+        // 셀마다 공통으로 지정되는 부분
         cityImageView.contentMode = .scaleToFill
         cityNameLabel.textAlignment = .center
         cityNameLabel.font = .boldSystemFont(ofSize: 13)
@@ -32,6 +33,7 @@ class CityCollectionViewCell: UICollectionViewCell {
         
     }
     
+    // 셀마다 다르게 적용되는 디자인 함수로 배주기
     func configureCell(data: City, cellWidth: CGFloat) {
         let url = URL(string: data.city_image)
         cityImageView.kf.setImage(with: url)
