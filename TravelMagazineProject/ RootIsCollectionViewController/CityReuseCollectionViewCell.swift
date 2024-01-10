@@ -22,7 +22,7 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var citiesLabel: UILabel!
     
-    // static으로 해주고 싶으면 프로토콜에도 static var 로 선언해주면 된다.
+    // static으로 해주고 싶으면 프로토콜에도 static var 로 선언해주면 된다.(let로 하면 오류남 -->???)
     static var identifier = "CityReuseCollectionViewCell"
     
     override func awakeFromNib() {
