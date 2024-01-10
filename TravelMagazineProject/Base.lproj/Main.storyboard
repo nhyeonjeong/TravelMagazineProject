@@ -194,7 +194,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mAr-D7-gqU">
-                                <rect key="frame" x="0.0" y="134" width="393" height="684"/>
+                                <rect key="frame" x="0.0" y="190" width="393" height="628"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rwj-Ny-91a">
                                     <size key="itemSize" width="128" height="128"/>
@@ -214,7 +214,7 @@
                                 </cells>
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZHv-e5-xXM">
-                                <rect key="frame" x="20" y="103" width="353" height="32"/>
+                                <rect key="frame" x="20" y="159" width="353" height="32"/>
                                 <segments>
                                     <segment title="모두"/>
                                     <segment title="국내"/>
@@ -224,22 +224,33 @@
                                     <action selector="segmentClicked:" destination="j0G-Dg-3AH" eventType="valueChanged" id="afQ-34-MKA"/>
                                 </connections>
                             </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="vkn-n7-z2R">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="j0G-Dg-3AH" id="pjb-bd-RDC"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BUc-gB-6DB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BUc-gB-6DB" firstAttribute="trailing" secondItem="mAr-D7-gqU" secondAttribute="trailing" id="2Rc-DL-wVR"/>
-                            <constraint firstItem="ZHv-e5-xXM" firstAttribute="top" secondItem="BUc-gB-6DB" secondAttribute="top" id="8yz-Nf-yDe"/>
+                            <constraint firstItem="vkn-n7-z2R" firstAttribute="trailing" secondItem="BUc-gB-6DB" secondAttribute="trailing" id="IjO-ZV-mRV"/>
+                            <constraint firstItem="vkn-n7-z2R" firstAttribute="leading" secondItem="BUc-gB-6DB" secondAttribute="leading" id="Qkk-Vh-bo7"/>
                             <constraint firstItem="BUc-gB-6DB" firstAttribute="trailing" secondItem="ZHv-e5-xXM" secondAttribute="trailing" constant="20" id="T25-n3-B7w"/>
                             <constraint firstItem="BUc-gB-6DB" firstAttribute="bottom" secondItem="mAr-D7-gqU" secondAttribute="bottom" id="ebw-Bp-z5m"/>
                             <constraint firstItem="mAr-D7-gqU" firstAttribute="leading" secondItem="BUc-gB-6DB" secondAttribute="leading" id="iCh-LG-AMW"/>
                             <constraint firstItem="mAr-D7-gqU" firstAttribute="top" secondItem="ZHv-e5-xXM" secondAttribute="bottom" id="jNQ-3F-kcp"/>
+                            <constraint firstItem="ZHv-e5-xXM" firstAttribute="top" secondItem="vkn-n7-z2R" secondAttribute="bottom" id="rxJ-Vb-THr"/>
+                            <constraint firstItem="vkn-n7-z2R" firstAttribute="top" secondItem="BUc-gB-6DB" secondAttribute="top" id="w4F-ju-Ugi"/>
                             <constraint firstItem="ZHv-e5-xXM" firstAttribute="leading" secondItem="BUc-gB-6DB" secondAttribute="leading" constant="20" id="wxf-d7-2d5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mIa-V1-byO"/>
                     <connections>
                         <outlet property="cityCollectionView" destination="mAr-D7-gqU" id="46t-Iv-f2N"/>
+                        <outlet property="citySearchBar" destination="vkn-n7-z2R" id="16n-yG-SRs"/>
                         <outlet property="domesticSegment" destination="ZHv-e5-xXM" id="nVy-Yj-fiz"/>
                     </connections>
                 </viewController>
