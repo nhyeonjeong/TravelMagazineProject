@@ -18,7 +18,7 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var citiesLabel: UILabel!
     
-    static var identifier = "CityCollectionViewCell"
+    static var identifier = "CityReuseCollectionViewCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
