@@ -31,18 +31,10 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
         // 셀마다 공통으로 지정되는 부분
         cityImageView.contentMode = .scaleAspectFill
         
-        cityNameLabel.font = .boldSystemFont(ofSize: 13)
-        cityNameLabel.textAlignment = .center
-        
-        citiesLabel.font = .boldSystemFont(ofSize: 11)
-        citiesLabel.textColor = .gray
-        citiesLabel.textAlignment = .center
-        citiesLabel.numberOfLines = 0
-        
-        citiesLabel.textAlignment = .center
-        
+        // extension UILabel로 뺴주기
+        cityNameLabel.labelConfigure(textColor: .black, numberOfLines: 1, fontSize: 13)
+        citiesLabel.labelConfigure(textColor: .gray, numberOfLines: 0, fontSize: 11)
     }
-
 }
 
 extension CityReuseCollectionViewCell: CollectionViewCellSetting {

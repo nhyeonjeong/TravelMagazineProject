@@ -79,19 +79,18 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         cityCollectionView.reloadData() // 데이터 변경했으니 다시 로딩
     }
-    
 }
 
 extension CityViewController: ViewControllerSetting {
     /// xib, register
     func collectionViewRegister() {
-        // 어차피 폴더명이랑 identifier랑 같으니까 static 변수로 같이 쓰기
-        let xib = UINib(nibName: CityReuseCollectionViewCell.identifier, bundle: nil)
-        cityCollectionView.register(xib, forCellWithReuseIdentifier: CityReuseCollectionViewCell.identifier)
+        // 다른 collectionView에서도 쓰일 것 같아서 Extension으로 따로 뺴줌
+        cityCollectionView.settingXib(collectionViewCellIdentifier: CityReuseCollectionViewCell.identifier)
     }
     
     /// CollectionView의 레이아웃잡기
     func settingCollectionViewLayout(cellWidth width: CGFloat) -> UICollectionViewFlowLayout {
+        
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: width, height: width + 74)
         layout.minimumLineSpacing = verticalSpacing
