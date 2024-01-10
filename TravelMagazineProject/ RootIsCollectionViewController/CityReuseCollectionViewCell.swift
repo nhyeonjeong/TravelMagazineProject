@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol CollectionViewCellSetting {
+    static var identifier: String { get set } // identifier지정하기
+    func configureCell(data: City, cellWidth: CGFloat) // 셀마다 다른 디자인 적용
+}
 // 라벨의 높이를 유동적으로 하고 싶다!..
 // -> stackview쓰니까 해결!(또는 label의 높이를 지정해주지 않으면 됨)
 
@@ -18,6 +22,7 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var citiesLabel: UILabel!
     
+    // static으로 해주고 싶으면 프로토콜에도 static var 로 선언해주면 된다.
     static var identifier = "CityReuseCollectionViewCell"
     
     override func awakeFromNib() {
@@ -37,10 +42,12 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
         citiesLabel.textAlignment = .center
         
     }
-    
+
+}
+
+extension CityReuseCollectionViewCell: CollectionViewCellSetting {
     // 셀마다 다르게 적용되는 디자인 함수로 배주기
     func configureCell(data: City, cellWidth: CGFloat) {
-        
         cityImageView.layer.cornerRadius = cellWidth / 2
         
         let imageUrl = URL(string: data.city_image)
@@ -49,5 +56,5 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
         cityNameLabel.text = "\(data.city_name) | \(data.city_english_name)"
         citiesLabel.text = data.city_explain
     }
-
+    
 }

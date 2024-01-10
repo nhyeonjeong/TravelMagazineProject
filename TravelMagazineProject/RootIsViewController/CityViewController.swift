@@ -14,12 +14,17 @@ enum TravelLocation: String, CaseIterable {
     case abroad = "해외"
 }
 
+protocol ViewControllerSetting {
+    func collectionViewRegister() // xib설정
+    func settingCollectionViewLayout(cellWidth width: CGFloat) -> UICollectionViewFlowLayout // Collectionview의 레이아웃 잡아줘야함
+}
 
 class CityViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet var domesticSegment: UISegmentedControl!
     @IBOutlet weak var cityCollectionView: UICollectionView!
     
+    // [.all, .local, /abroad]리스트
     let domestic = TravelLocation.allCases
     
     let city: [City] = CityInfo().city
