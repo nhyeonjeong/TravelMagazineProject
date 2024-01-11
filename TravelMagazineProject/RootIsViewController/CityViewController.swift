@@ -25,7 +25,7 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet var domesticSegment: UISegmentedControl!
     @IBOutlet weak var cityCollectionView: UICollectionView!
     
-    // [.all, .local, /abroad]리스트
+    // [.all, .local, .abroad]리스트
     let domestic = TravelLocation.allCases
     
     let city: [City] = CityInfo().city
@@ -95,6 +95,15 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
             filterdCity = city
         }
     }
+    
+    /// 받은 스트링을 ,와 공백 빼고 다시 문자열로 반환하는 함수
+    func duplicateComma(string: String) -> String {
+        // 공백이 2칸 이상이어도 separator에서 잘 걸러준다
+        let newString = string.split(separator: [",", " "]).joined() // 배열 반환
+        print("string: \(string)")
+        print("newString: \(newString)")
+        return newString // 공백이 있으면 제거해서 반환
+    }
 }
 
 extension CityViewController: ViewControllerSetting {
@@ -128,9 +137,11 @@ extension CityViewController: UISearchBarDelegate {
         filterCity(state: domestic[currentSegmentIdx]) // filteredCity가 다시 설정된다.(바로 아래 코드에서 잘 작동할 수 있게 된다.)
         // 만약 위의 코드가 없다면 어떤 세그먼트에 계속 있는 상태에서 문자열의 변화를 줬을 때 이전 검색기록에서 다시 필터를 하기 떄문에
         // 태초의 상태로 돌려주어야 한다.
-        filterdCity = filterdCity.filter{"\($0.city_name) + \($0.city_english_name) + \($0.city_explain)".contains(searchText)}
+        let text = searchText.split(separator: [",", " "]).joined().trimmingCharacters(in: .whitespaces).lowercased()
+        
+        // 대소문자, 사이 공백, 양쪽 공백, 콤마 고려하지 않는뎅..
+        filterdCity = filterdCity.filter{"\($0.city_name.lowercased()) + \($0.city_english_name.lowercased()) + \(duplicateComma(string: $0.city_explain).lowercased())".trimmingCharacters(in: .whitespaces).contains(text)}
         
         cityCollectionView.reloadData()
     }
 }
-
