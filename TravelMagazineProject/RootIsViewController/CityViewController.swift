@@ -145,11 +145,3 @@ extension CityViewController: UISearchBarDelegate {
         cityCollectionView.reloadData()
     }
 }
-
-////방콕파타야
-////bangkok
-////토나\두
-//
-//사카교토
-//고베
-//나라
