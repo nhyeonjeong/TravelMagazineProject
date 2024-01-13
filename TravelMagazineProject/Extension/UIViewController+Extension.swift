@@ -14,3 +14,10 @@ extension UICollectionView {
         self.register(xib, forCellWithReuseIdentifier: identifier)
     }
 }
+
+extension UITableView {
+    func settingXib(tableViewCellIdentifier identifier: String) {
+        let xib = UINib(nibName: identifier, bundle: nil)
+        self.register(xib, forCellReuseIdentifier: identifier)
+    }
+}

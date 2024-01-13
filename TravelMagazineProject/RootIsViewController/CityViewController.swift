@@ -18,7 +18,7 @@ protocol ViewProtocol {
 }
 
 // fouthweekProject에서 configuretableView 함수와 같은 것(거기서는 따로 프로토콜로 빼주지는 않았음)
-protocol ViewControllerSetting {
+protocol CollectionViewControllerSetting {
     func collectionViewRegister() // xib설정
     func settingCollectionViewLayout(cellWidth width: CGFloat) -> UICollectionViewFlowLayout // Collectionview의 레이아웃 잡아줘야함
 }
@@ -102,7 +102,7 @@ extension CityViewController: ViewProtocol {
 }
 
 // UI 요소들
-extension CityViewController: ViewControllerSetting {
+extension CityViewController: CollectionViewControllerSetting {
     /// xib, register
     func collectionViewRegister() {
         // 다른 collectionView에서도 쓰일 것 같아서 Extension으로 따로 뺴줌
@@ -139,6 +139,14 @@ extension CityViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.configureCell(data: filterdCity[indexPath.item], cellWidth: width)
         return cell
         
+    }
+    // 컬렌션셀이 눌렸을 때
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+ 
+        let sb = UIStoryboard(name: "TravelInfo", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: TravelInfoViewController.identifier) as! TravelInfoViewController
+
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     
