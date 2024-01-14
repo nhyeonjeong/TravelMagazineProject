@@ -32,8 +32,8 @@ class CityReuseCollectionViewCell: UICollectionViewCell {
         cityImageView.contentMode = .scaleAspectFill
         
         // extension UILabel로 뺴주기
-        cityNameLabel.labelConfigure(textColor: .black, numberOfLines: 1, fontSize: 13)
-        citiesLabel.labelConfigure(textColor: .gray, numberOfLines: 0, fontSize: 11)
+        cityNameLabel.boldLabelConfigure(fontSize: 13)
+        citiesLabel.boldLabelConfigure(textColor: .gray, numberOfLines: 0, fontSize: 11)
     }
 }
 

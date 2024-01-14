@@ -13,13 +13,17 @@ enum TravelLocation: String, CaseIterable {
     case local = "국내"
     case abroad = "해외"
 }
+protocol ViewProtocol {
+    func configureView()
+}
 
-protocol ViewControllerSetting {
+// fouthweekProject에서 configuretableView 함수와 같은 것(거기서는 따로 프로토콜로 빼주지는 않았음)
+protocol CollectionViewControllerSetting {
     func collectionViewRegister() // xib설정
     func settingCollectionViewLayout(cellWidth width: CGFloat) -> UICollectionViewFlowLayout // Collectionview의 레이아웃 잡아줘야함
 }
 
-class CityViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class CityViewController: UIViewController {
     
     @IBOutlet weak var citySearchBar: UISearchBar!
     @IBOutlet var domesticSegment: UISegmentedControl!
@@ -37,35 +41,18 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let inset: CGFloat = 20
     
     var currentSegmentIdx: Int = 0 // 서치바 위해 현재 세그먼트위치 저장
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filterdCity.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CityReuseCollectionViewCell.identifier, for: indexPath) as! CityReuseCollectionViewCell
-        
-        cell.configureCell(data: filterdCity[indexPath.item], cellWidth: width)
-        return cell
-        
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = "인기 도시"
-        filterdCity = city
-        
         collectionViewRegister()
-
-        cityCollectionView.dataSource = self
-        cityCollectionView.delegate = self
-        citySearchBar.delegate = self
+        
+        configureView()
         
         width = (UIScreen.main.bounds.width - (inset * 2 + horizontalSpacing)) / 2
         
-        // 레이아웃 잡기
+        // 레이아웃 함수에서 처리후 collectionViewLayout에 넘기기
         cityCollectionView.collectionViewLayout = settingCollectionViewLayout(cellWidth: width)
         
 //        designElements()
@@ -106,10 +93,22 @@ class CityViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
 }
 
-extension CityViewController: ViewControllerSetting {
+extension CityViewController: ViewProtocol {
+    /// 뷰 초기 구성
+    func configureView() {
+        filterdCity = city
+        citySearchBar.delegate = self
+    }
+}
+
+// UI 요소들
+extension CityViewController: CollectionViewControllerSetting {
     /// xib, register
     func collectionViewRegister() {
         // 다른 collectionView에서도 쓰일 것 같아서 Extension으로 따로 뺴줌
+        cityCollectionView.dataSource = self
+        cityCollectionView.delegate = self
+        
         cityCollectionView.settingXib(collectionViewCellIdentifier: CityReuseCollectionViewCell.identifier)
     }
     
@@ -124,8 +123,36 @@ extension CityViewController: ViewControllerSetting {
         
         return layout
     }
+
 }
 
+extension CityViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filterdCity.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CityReuseCollectionViewCell.identifier, for: indexPath) as! CityReuseCollectionViewCell
+        
+        cell.configureCell(data: filterdCity[indexPath.item], cellWidth: width)
+        return cell
+        
+    }
+    // 컬렌션셀이 눌렸을 때
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+ 
+        let sb = UIStoryboard(name: "TravelInfo", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: TravelInfoViewController.identifier) as! TravelInfoViewController
+
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+}
+
+// 서치바 관련 메서드
 extension CityViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
