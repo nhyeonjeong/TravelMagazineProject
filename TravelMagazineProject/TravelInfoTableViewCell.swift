@@ -20,23 +20,8 @@ class TravelInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        travelImageView.contentMode = .scaleAspectFill
-        
-        travelTitleLabel.font = .boldSystemFont(ofSize: 17)
-        travelSubTitleLabel.font = .boldSystemFont(ofSize: 15)
-        travelSubTitleLabel.numberOfLines = 0
-        
-        travelSubTitleLabel.textColor = .gray
-        
-        travelDetailLabel.font = .systemFont(ofSize: 15)
-        travelDetailLabel.textColor = .systemGray2
-        
-        likeImageView.image = UIImage(systemName: "heart")
-        likeImageView.tintColor = .white
-        
-        travelImageView.layer.cornerRadius = 7
-        
+
+        settingCell()
     }
     
     func configureCell(_ data: Travel) {
@@ -49,5 +34,23 @@ class TravelInfoTableViewCell: UITableViewCell {
         
         let heartImage = data.like ?? false ? "heart.fill" : "heart"
         likeImageView.image = UIImage(systemName: heartImage)
+    }
+}
+
+extension TravelInfoTableViewCell {
+    /// cell UI 세팅
+    func settingCell() {
+        travelImageView.contentMode = .scaleAspectFill
+        
+        travelTitleLabel.boldLabelConfigure(fontSize: 17)
+
+        travelSubTitleLabel.boldLabelConfigure(textColor: .gray, numberOfLines: 0, fontSize: 15)
+        
+        travelDetailLabel.labelConfigure(textColor: .systemGray2, fontSize: 15)
+        
+        likeImageView.image = UIImage(systemName: "heart")
+        likeImageView.tintColor = .white
+        
+        travelImageView.layer.cornerRadius = 7
     }
 }

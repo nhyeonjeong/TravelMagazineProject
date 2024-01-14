@@ -17,7 +17,6 @@ class ADDetailViewController: UIViewController {
     }
     
     @objc func dismissClicked() {
-//        navigationController?.popViewController(animated: true)
         dismiss(animated: true)
     }
 }

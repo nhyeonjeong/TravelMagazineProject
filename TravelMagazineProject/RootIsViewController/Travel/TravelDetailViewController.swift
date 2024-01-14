@@ -13,7 +13,7 @@ class TravelDetailViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "관광지 화면"
-        
+        // 네비게이션왼쪽 바 버튼 세팅
         setBarButtonItem()
     }
     

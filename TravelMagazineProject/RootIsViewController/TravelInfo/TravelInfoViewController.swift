@@ -31,7 +31,7 @@ extension TravelInfoViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        // xib 두 개 종류니까 생성
+        // xib 두 개 종류니까 생성(어차피 따로 생성해서 register해주니까 하나의 코드로 해도 된다.)
         tableView.settingXib(tableViewCellIdentifier: TravelInfoTableViewCell.identifier)
         tableView.settingXib(tableViewCellIdentifier: ADTableViewCell.identifier)
         
