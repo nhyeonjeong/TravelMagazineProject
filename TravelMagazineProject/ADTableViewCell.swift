@@ -34,7 +34,9 @@ class ADTableViewCell: UITableViewCell {
         // cell의 백그라운드 컬러
         self.backgroundColor = randomColor
         self.layer.cornerRadius = 8
+        
         titleLabel.text = data.title
+        titleLabel.font = .boldSystemFont(ofSize: 17)
     }
     
 }

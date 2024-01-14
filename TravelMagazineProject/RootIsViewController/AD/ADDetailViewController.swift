@@ -13,6 +13,22 @@ class ADDetailViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "광고 화면"
+        setBarButtonItem()
     }
     
+    @objc func dismissClicked() {
+//        navigationController?.popViewController(animated: true)
+        dismiss(animated: true)
+    }
+}
+
+// UI적 요소
+extension ADDetailViewController {
+    
+    func setBarButtonItem() {
+        let buttonImage = UIImage(systemName: "xmark")
+        let button = UIBarButtonItem(image: buttonImage, style: .plain, target: self, action: #selector(dismissClicked))
+        
+        navigationItem.leftBarButtonItem = button
+    }
 }

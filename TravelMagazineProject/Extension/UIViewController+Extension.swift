@@ -21,3 +21,7 @@ extension UITableView {
         self.register(xib, forCellReuseIdentifier: identifier)
     }
 }
+
+extension UIViewController {
+    
+}

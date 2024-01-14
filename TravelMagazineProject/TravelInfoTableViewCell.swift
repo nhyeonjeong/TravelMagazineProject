@@ -35,6 +35,8 @@ class TravelInfoTableViewCell: UITableViewCell {
         likeImageView.image = UIImage(systemName: "heart")
         likeImageView.tintColor = .white
         
+        travelImageView.layer.cornerRadius = 7
+        
     }
     
     func configureCell(_ data: Travel) {
