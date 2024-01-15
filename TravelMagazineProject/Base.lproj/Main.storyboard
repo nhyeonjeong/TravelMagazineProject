@@ -134,6 +134,9 @@
                             <constraint firstItem="cT0-ZL-UYZ" firstAttribute="top" secondItem="PSv-hd-cBA" secondAttribute="top" id="hMr-Qv-O3h"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="cT0-ZL-UYZ" id="bdc-2d-ff6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Rn-45-cmO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8B457E702B555F7100C3154F /* TravelMagazineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B457E6F2B555F7100C3154F /* TravelMagazineDetailViewController.swift */; };
+		8B457E712B55664F00C3154F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9267EA2B4C0D3900F5CFF6 /* Main.storyboard */; };
 		8B9267E52B4C0D3900F5CFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267E42B4C0D3900F5CFF6 /* AppDelegate.swift */; };
 		8B9267E72B4C0D3900F5CFF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267E62B4C0D3900F5CFF6 /* SceneDelegate.swift */; };
 		8B9267E92B4C0D3900F5CFF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267E82B4C0D3900F5CFF6 /* ViewController.swift */; };
-		8B9267EC2B4C0D3900F5CFF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9267EA2B4C0D3900F5CFF6 /* Main.storyboard */; };
 		8B9267EE2B4C0D3A00F5CFF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B9267ED2B4C0D3A00F5CFF6 /* Assets.xcassets */; };
 		8B9267F12B4C0D3A00F5CFF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9267EF2B4C0D3A00F5CFF6 /* LaunchScreen.storyboard */; };
 		8B9267F92B4C0F3F00F5CFF6 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267F82B4C0F3F00F5CFF6 /* TravelTableViewCell.swift */; };
@@ -266,8 +266,8 @@
 				8B9267F12B4C0D3A00F5CFF6 /* LaunchScreen.storyboard in Resources */,
 				8B9267EE2B4C0D3A00F5CFF6 /* Assets.xcassets in Resources */,
 				8BA49B152B52A7EB001869E3 /* TravelInfo.storyboard in Resources */,
-				8B9267EC2B4C0D3900F5CFF6 /* Main.storyboard in Resources */,
 				8BA49B1D2B52A9B3001869E3 /* ADTableViewCell.xib in Resources */,
+				8B457E712B55664F00C3154F /* Main.storyboard in Resources */,
 				8BD1CFC02B52FC1500923F88 /* TravelDetail.storyboard in Resources */,
 				8BA49B192B52A99A001869E3 /* TravelInfoTableViewCell.xib in Resources */,
 			);
