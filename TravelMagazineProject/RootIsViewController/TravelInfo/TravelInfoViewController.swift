@@ -8,7 +8,7 @@
 import UIKit
 
 class TravelInfoViewController: UIViewController {
-    static let identifier = "TravelInfoViewController"
+    
     @IBOutlet weak var tableView: UITableView!
 
     let travelInfo = TravelInfo().travel

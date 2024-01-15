@@ -8,7 +8,7 @@
 import UIKit
 
 class TravelDetailViewController: UIViewController {
-    static let identifier = "TravelDetailViewController"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

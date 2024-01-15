@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B457E702B555F7100C3154F /* TravelMagazineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B457E6F2B555F7100C3154F /* TravelMagazineDetailViewController.swift */; };
 		8B9267E52B4C0D3900F5CFF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267E42B4C0D3900F5CFF6 /* AppDelegate.swift */; };
 		8B9267E72B4C0D3900F5CFF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267E62B4C0D3900F5CFF6 /* SceneDelegate.swift */; };
 		8B9267E92B4C0D3900F5CFF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9267E82B4C0D3900F5CFF6 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B457E6F2B555F7100C3154F /* TravelMagazineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelMagazineDetailViewController.swift; sourceTree = "<group>"; };
 		8B9267E12B4C0D3900F5CFF6 /* TravelMagazineProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelMagazineProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9267E42B4C0D3900F5CFF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B9267E62B4C0D3900F5CFF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				8BAF0C022B4F293900FA3EF0 /* Magazine.swift */,
 				8B9267F82B4C0F3F00F5CFF6 /* TravelTableViewCell.swift */,
 				8B9267FA2B4C0F5000F5CFF6 /* TravelTableViewController.swift */,
+				8B457E6F2B555F7100C3154F /* TravelMagazineDetailViewController.swift */,
 			);
 			path = TravelMagazineProject;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				8BAF0BE22B4DB6FD00FA3EF0 /* CityReuseCollectionViewCell.swift in Sources */,
 				8BAF0BFF2B4F0CCF00FA3EF0 /* UIViewController+Extension.swift in Sources */,
+				8B457E702B555F7100C3154F /* TravelMagazineDetailViewController.swift in Sources */,
 				8BA49B1F2B52AFD4001869E3 /* TravelInfoViewController.swift in Sources */,
 				8BA49B212B52B156001869E3 /* TravelModel.swift in Sources */,
 				8BAF0BDD2B4DAF0800FA3EF0 /* CityCollectionViewCell.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 class ADDetailViewController: UIViewController {
-    static let identifier = "ADDetailViewController"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
