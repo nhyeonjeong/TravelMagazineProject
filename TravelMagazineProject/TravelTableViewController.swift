@@ -10,7 +10,7 @@ import Kingfisher
 
 class TravelTableViewController: UITableViewController {
 
-    let magazine = MagazineInfo().magazine
+    let magazine = MagazineInfo.magazine
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,13 @@ class TravelTableViewController: UITableViewController {
         cell.configureCell(magazine: magazine[indexPath.row])
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: TravelMagazineDetailViewController.identifier) as! TravelMagazineDetailViewController
+
+        vc.websitestring = magazine[indexPath.row].photo_image
+        present(vc, animated: true)
     }
     
     // 오토레이아웃으로 인해 유동적으로 변하는 높이는 오히려 이 함수를 써주지 않으면 잘나온다..
